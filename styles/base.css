@@ -43,10 +43,13 @@ nav a {
     text-align: center;
     flex: 1;
     font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    color: #e0e0e0;
+    color: #FFD700;
+    background-color: #3A4A6A;
+    border-radius: 4px;
 }
 
 main {
