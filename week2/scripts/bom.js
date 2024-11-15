@@ -24,6 +24,9 @@ button.addEventListener('click', function () {
         input.value = '';
 
         input.focus();
+    } else {
+        alert("Enter a chapter:");
+        input.focus();
     }
 });
 
