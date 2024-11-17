@@ -1,0 +1,157 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+}
+
+header,
+footer {
+    background-color: #2A3B59;
+    color: white;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.header-container,
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+.name-highlight {
+    color: #FFD700;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 5px 10px;
+    text-align: center;
+    flex: 1;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFD700;
+    background-color: #3A4A6A;
+    border-radius: 4px;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    min-width: 1200px;
+    padding: 20px;
+    align-items: stretch;
+}
+
+.card {
+    background-color: #f4f4f4;
+    padding: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #2A3B59;
+    color: white;
+    padding: 5px 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-me {
+    flex: 2;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.1em;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.profile-pic {
+    float: right;
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.links {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.1em;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.links ul li {
+    margin: 10px 0;
+}
+
+.intro hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    clear: both;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+#lastModified {
+    color: #FFD700;
+    padding: 2px 5px;
+    border-radius: 4px;
+    display: inline-block;
+}
