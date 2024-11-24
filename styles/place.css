@@ -1,0 +1,168 @@
+/*    Root Variables - I did these because variable made sense to me more than copying hex values */
+:root {
+    --green: #009739;
+    --yellow: #FFD700;
+    --blue: #002776;
+    --white: #FFFFFF;
+}
+
+/*   Base Styling  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    max-width: 60rem;
+    text-align: center;
+    background-color: var(--green);
+    color: var(--yellow);
+    padding: 1rem 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    max-width: 60rem;
+    text-align: center;
+    background-color: var(--green);
+    color: var(--yellow);
+    padding: 1rem 0;
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 60rem;
+    margin: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.data, .weather {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    max-width: 350px;
+    text-align: left;
+}
+
+.data h2, .weather h2 {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: var(--green);
+    background-color: var(--yellow);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.weather-icon {
+    display: block;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+dl {
+    display: table;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+
+.row {
+    display: table-row;
+}
+
+dt, dd {
+    display: table-cell;
+    padding: 0.2rem 0;
+}
+
+dt {
+    font-weight: bold;
+    text-align: right;
+    width: 40%;
+}
+
+dd {
+    text-align: left;
+    width: 60%;
+}
+
+/*   Wide View (min-width: 768px)  */
+@media (min-width: 768px) {
+    .data {
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    .data h2, .weather h2 {
+        background-color: var(--yellow);
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .weather-icon {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+    }
+}
+
+/*   Narrow View (max-width: 767px) I change font color here to Black on White to maintain better color match for layout changes */
+@media (max-width: 767px) {
+    .data, .weather {
+        position: static;
+        margin: 1rem auto;
+        width: 90%;
+        max-width: 60rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .data h2, .weather h2 {
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+    }
+
+    .weather-icon {
+        display: block;
+        margin: 0.5rem auto;
+        width: 40px;
+        height: 40px;
+    }
+
+    dl {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
