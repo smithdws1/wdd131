@@ -3,10 +3,9 @@
     --yellow: #FFD700;
     --blue: #002776;
     --white: #FFFFFF;
-    --black: #000000;
 }
 
-/* Base Styling */
+/* Base Styles */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
@@ -53,43 +52,53 @@ footer {
     display: block;
 }
 
-/* Data and Weather Box Styling */
+/* Data and Weather Box */
 .data, .weather {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     max-width: 350px;
-    color: var(--black);
+    text-align: center;
+    color: black;
+    margin: 1.5rem auto;
 }
 
 .data h2, .weather h2 {
     margin: 0;
     padding: 0.5rem;
+    text-align: center;
     color: var(--green);
     background-color: var(--yellow);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    position: relative;
 }
 
 /* Pseudo-element for Weather Icon */
 .weather h2::after {
-    content: '⛅';
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
+    content: '';
+    display: block;
+    margin: 1rem auto;
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/weather-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-/* Table-like layout for Data and Weather content */
+/* Data and Weather Content */
 dl {
     display: table;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
-    font-size: 0.9rem;
-    line-height: 1.2;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .row {
@@ -98,21 +107,23 @@ dl {
 
 dt, dd {
     display: table-cell;
+    text-align: center;
+    vertical-align: middle;
     padding: 0.2rem 0;
 }
 
 dt {
     font-weight: bold;
     text-align: right;
-    width: 40%;
+    padding-right: 0.5rem;
 }
 
 dd {
     text-align: left;
-    width: 60%;
+    padding-left: 0.5rem;
 }
 
-/* Wide View Styling */
+/* Wide View  */
 @media (min-width: 768px) {
     .data {
         position: absolute;
@@ -125,9 +136,23 @@ dd {
         bottom: 2rem;
         right: 2rem;
     }
+
+    .data h2, .weather h2 {
+        background-color: var(--yellow);
+        color: var(--green);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .weather h2::after {
+        content: '⛅';
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
 }
 
-/* Narrow View Styling I override the font color here. Makes the most sense.*/
+/* Narrow View I change the font and positioning here */
 @media (max-width: 767px) {
     .data, .weather {
         position: static;
@@ -135,6 +160,7 @@ dd {
         width: 90%;
         max-width: 60rem;
         background-color: rgba(255, 255, 255, 0.8);
+        color: black;
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 1rem;
         border-radius: 8px;
@@ -142,24 +168,35 @@ dd {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .data h2, .weather h2 {
+    .data h2 {
         background-color: transparent;
         color: black;
         font-weight: bold;
         font-size: 1.4rem;
+        margin-bottom: 1rem;
         text-align: center;
     }
 
-    .weather h2::after {
-        content: '';
+    .weather h2 {
+        background-color: transparent;
+        color: black;
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .weather-icon {
+        margin-top: 0.5rem;
         display: block;
-        margin: 1rem auto;
+    }
+
+    .weather-icon svg {
         width: 80px;
         height: 80px;
-        background-image: url('images/weather-icon.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
     }
 
     dl {
