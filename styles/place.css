@@ -1,4 +1,3 @@
-/*    Root Variables - I did these because variable made sense to me more than copying hex values */
 :root {
     --green: #009739;
     --yellow: #FFD700;
@@ -6,7 +5,6 @@
     --white: #FFFFFF;
 }
 
-/*   Base Styling  */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -62,20 +60,44 @@ footer {
     text-align: left;
 }
 
-.data h2, .weather h2 {
+.data h2 {
     margin: 0;
     padding: 0.5rem;
-    text-align: center;
+    text-align: Left;
     color: var(--green);
     background-color: var(--yellow);
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
 
+.weather h2 {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: left; 
+    color: var(--green);
+    background-color: var(--yellow);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.weather-icon::after {
+    content: '⛅';
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
 .weather-icon {
     display: block;
-    font-size: 2rem;
-    margin-top: 0.5rem;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    background-image: url('images/weather-icon.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 dl {
@@ -107,7 +129,6 @@ dd {
     width: 60%;
 }
 
-/*   Wide View (min-width: 768px)  */
 @media (min-width: 768px) {
     .data {
         position: absolute;
@@ -120,22 +141,8 @@ dd {
         bottom: 2rem;
         right: 2rem;
     }
-
-    .data h2, .weather h2 {
-        background-color: var(--yellow);
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-
-    .weather-icon {
-        width: 32px;
-        height: 32px;
-        vertical-align: middle;
-        margin-right: 0.5rem;
-    }
 }
 
-/*   Narrow View (max-width: 767px) I change font color here to Black on White to maintain better color match for layout changes */
 @media (max-width: 767px) {
     .data, .weather {
         position: static;
@@ -159,10 +166,9 @@ dd {
         margin: 0.5rem auto;
         width: 40px;
         height: 40px;
-    }
-
-    dl {
-        font-size: 1rem;
-        line-height: 1.4;
+        background-image: url('images/weather-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
