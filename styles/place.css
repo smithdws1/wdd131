@@ -78,61 +78,24 @@ footer {
     position: relative;
 }
 
-/* Pseudo-element for Weather Icon */
-.weather h2::after {
-    content: '';
-    display: block;
-    margin: 1rem auto;
-    width: 80px;
-    height: 80px;
-    background-image: url('/images/weather-icon.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* Data and Weather Content */
-dl {
-    display: table;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.row {
-    display: table-row;
-}
-
-dt, dd {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    padding: 0.2rem 0;
-}
-
-dt {
-    font-weight: bold;
-    text-align: right;
-    padding-right: 0.5rem;
-}
-
-dd {
-    text-align: left;
-    padding-left: 0.5rem;
-}
-
-/* Wide View  */
+/* Wide View */
 @media (min-width: 768px) {
-    .data {
+    .data, .weather {
         position: absolute;
+        width: 15rem;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: .5rem;
+        text-align: left;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .data {
         top: 2rem;
         left: 2rem;
     }
 
     .weather {
-        position: absolute;
         bottom: 2rem;
         right: 2rem;
     }
@@ -143,6 +106,10 @@ dd {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        white-space: nowrap;
+        padding: 0.5rem;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     .weather h2::after {
@@ -150,9 +117,38 @@ dd {
         font-size: 1.5rem;
         margin-left: 0.5rem;
     }
+
+    dl {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .row {
+        display: table-row;
+    }
+
+    dt, dd {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0.2rem 0;
+    }
+
+    dt {
+        text-align: right;
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
+
+    dd {
+        text-align: left;
+        padding-left: 0.5rem;
+    }
 }
 
-/* Narrow View I change the font and positioning here */
+/* Narrow View */
 @media (max-width: 767px) {
     .data, .weather {
         position: static;
@@ -189,14 +185,16 @@ dd {
         align-items: center;
     }
 
-    .weather-icon {
-        margin-top: 0.5rem;
+    .weather h2::after {
+        content: '';
         display: block;
-    }
-
-    .weather-icon svg {
+        margin: 1rem auto;
         width: 80px;
         height: 80px;
+        background-image: url('/images/weather-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     dl {
