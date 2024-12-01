@@ -1,9 +1,11 @@
+/* Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -13,6 +15,7 @@ body {
     padding: 0;
 }
 
+/* Header Styling */
 header {
     background-color: #7A00CF;
     color: white;
@@ -26,6 +29,7 @@ header h1 {
     font-size: 1.5rem;
 }
 
+/* Navigation Styling */
 nav {
     position: relative;
 }
@@ -46,6 +50,7 @@ nav {
     flex-direction: column;
     gap: 10px;
     margin-top: 1rem;
+    padding: 0;
 }
 
 .menu-visible {
@@ -58,20 +63,22 @@ nav {
     text-align: center;
 }
 
-.menu button {
+.menu a {
     color: white;
-    background-color: #5A008E;
+    text-decoration: none;
     padding: 0.5rem;
-    border: none;
+    background-color: #5A008E;
     border-radius: 5px;
-    cursor: pointer;
+    display: block;
+    text-align: center;
 }
 
-.menu button.active {
+.menu a.active {
     background-color: #7A00CF;
     color: #FFD700;
 }
 
+/* Main Content Styling */
 main {
     padding: 1rem;
     max-width: 90%;
@@ -85,6 +92,7 @@ h2 {
     text-align: center;
 }
 
+/* Gallery and Card Styling */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -98,7 +106,6 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .temple-card img {
@@ -119,6 +126,7 @@ h2 {
     color: #555;
 }
 
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 1rem;

@@ -22,11 +22,17 @@
         text-align: left;
     }
 
-    .menu button {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+    .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem;
         border-radius: 5px;
-        cursor: pointer;
+        background-color: #5A008E;
+    }
+
+    .menu a.active {
+        background-color: #7A00CF;
+        color: #FFD700;
     }
 
     main {
