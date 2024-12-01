@@ -67,7 +67,6 @@ nav {
     cursor: pointer;
 }
 
-.menu button:hover,
 .menu button.active {
     background-color: #7A00CF;
     color: #FFD700;
@@ -100,11 +99,6 @@ h2 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.temple-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .temple-card img {
