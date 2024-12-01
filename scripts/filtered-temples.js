@@ -1,15 +1,6 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 document.getElementById('last-modified').textContent = document.lastModified;
 
-const hamburger = document.querySelector('.hamburger-menu');
-const menu = document.querySelector('.menu');
-
-hamburger.addEventListener('click', () => {
-    const isExpanded = menu.classList.toggle('menu-visible');
-    hamburger.textContent = isExpanded ? 'X' : '☰';
-    hamburger.setAttribute('aria-expanded', isExpanded);
-});
-
 // Array of temple data
 const temples = [
   {
@@ -74,7 +65,7 @@ const temples = [
     dedicated: "1993, April, 25",
     area: 72000,
     imageUrl:
-          "https://churchofjesuschristtemples.org/assets/img/temples/san-diego-california-temple/san-diego-california-temple-52093-thumb.jpg",
+      "https://churchofjesuschristtemples.org/assets/img/temples/san-diego-california-temple/san-diego-california-temple-52093-thumb.jpg",
   },
   {
     templeName: "St. George Utah",
@@ -91,7 +82,8 @@ const temples = [
     area: 10700,
     imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/porto-alegre-brazil-temple/porto-alegre-brazil-temple-6697-thumb.jpg",
-  },];
+  },
+];
 
 function renderTemples(templesArray) {
   const container = document.getElementById("temples-container");
