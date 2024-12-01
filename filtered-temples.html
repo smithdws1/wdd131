@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filtered Temple Album</title>
+    <meta name="description" content="A dynamic temple album featuring filters and lazy loading for LDS temples.">
+    <meta name="author" content="David Smith">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Filtered Temple Album</h1>
+        <nav>
+            <button class="hamburger-menu" aria-label="Toggle Navigation" aria-expanded="false">☰</button>
+            <ul class="menu">
+                <li><button id="home" class="active">Home</button></li>
+                <li><button id="old">Old</button></li>
+                <li><button id="new">New</button></li>
+                <li><button id="large">Large</button></li>
+                <li><button id="small">Small</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to the Filtered Temple Gallery</h2>
+        <div id="temples-container" class="gallery"></div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> David Smith. All Rights Reserved.</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
