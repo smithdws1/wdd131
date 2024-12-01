@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Table Styling */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+thead th {
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
+
+thead td.blank {
+    background-color: white;
+    border: none;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+td {
+    font-size: 1.2em;
+}
+
+td:has(✔️) {
+    color: purple;
+}
+
+td:has(❌) {
+    color: red;
+}

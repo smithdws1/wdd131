@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lazy Load Image Gallery</title>
+    <meta name="description" content="A gallery showcasing images with lazy loading and animations for optimized performance.">
+    <meta name="author" content="David Smith">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lazy Load Image Gallery</h1>
+    </header>
+    <main>
+        <img data-src="images/human_paladin.webp" alt="Human Paladin" class="lazy">
+        <img data-src="images/dragonborn_sorcerer.webp" alt="Dragonborn Sorcerer" class="lazy">
+        <img data-src="images/dwarven_warrior.webp" alt="Dwarven Warrior" class="lazy">
+        <img data-src="images/elven_ranger.webp" alt="Elven_ranger" class="lazy">
+        <img data-src="images/half-elf_rogue.webp" alt="Half-Elf Rogue" class="lazy">
+        <img data-src="images/gnome_illusionist.webp" alt="Gnome Illusionist" class="lazy">
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> David Smith. All Rights Reserved.</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+</body>
+
+</html>
