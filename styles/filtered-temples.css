@@ -48,13 +48,8 @@ nav {
     border-radius: 5px;
     display: inline-block;
     text-align: center;
-    background-color: transparent;
-}
-
-.menu a.active {
     background-color: #5A008E;
-    color: white;
-    font-weight: bold;
+    font-weight: bold; 
 }
 
 main {

@@ -18,20 +18,18 @@
         text-align: center;
     }
 
-    .menu a {
-        color: white;
-        text-decoration: none;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border-radius: 5px;
-        background-color: transparent;
-    }
+ .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    background-color: #5A008E;
+    font-weight: bold;
+}
 
-    .menu a.active {
-        background-color: #7A00CF;
-        color: white;
-        font-weight: bold;
-    }
 
     main {
         max-width: 80%;
