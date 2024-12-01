@@ -1,11 +1,9 @@
-/* Reset and Box Sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -15,7 +13,6 @@ body {
     padding: 0;
 }
 
-/* Header Styling */
 header {
     background-color: #7A00CF;
     color: white;
@@ -29,7 +26,6 @@ header h1 {
     font-size: 1.5rem;
 }
 
-/* Navigation Styling */
 nav {
     position: relative;
 }
@@ -78,7 +74,6 @@ nav {
     color: #FFD700;
 }
 
-/* Main Content Styling */
 main {
     padding: 1rem;
     max-width: 90%;
@@ -92,7 +87,6 @@ h2 {
     text-align: center;
 }
 
-/* Gallery and Card Styling */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -126,7 +120,6 @@ h2 {
     color: #555;
 }
 
-/* Footer Styling */
 footer {
     text-align: center;
     padding: 1rem;
