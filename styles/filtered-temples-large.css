@@ -18,23 +18,28 @@
         text-align: center;
     }
 
- .menu a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border-radius: 5px;
-    display: inline-block;
-    text-align: center;
-    background-color: #5A008E;
-    font-weight: bold;
-}
-
-
-    main {
-        max-width: 80%;
-        margin: 0 auto;
+    .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        display: inline-block;
+        text-align: center;
+        background-color: #5A008E;
+        font-weight: bold;
     }
+
+    .menu a.active {
+        background-color: #5A008E;
+        color: white;
+        font-weight: bold;
+    }
+
+        main {
+            max-width: 80%;
+            margin: 0 auto;
+        }
 
     h2 {
         font-size: 2rem;

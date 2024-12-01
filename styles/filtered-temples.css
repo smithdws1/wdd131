@@ -52,6 +52,17 @@ nav {
     font-weight: bold; 
 }
 
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.menu a.active {
+    background-color: #5A008E;
+    color: white;
+    font-weight: bold;
+}
+
 main {
     padding: 1rem;
     max-width: 90%;
