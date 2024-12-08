@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+</head>
+
+<body>
+    <h1>Thank You for Your Review!</h1>
+    <p>Your review has been submitted successfully.</p>
+    <p>You have submitted <span id="reviewCount">0</span> reviews.</p>
+
+    <footer>
+        <p>&copy; <span id="year"></span> David Smith. All Rights Reserved.</p>
+        <p>Last Updated: <span id="last-modified"></span></p>
+    </footer>
+
+    <script>
+        let reviewCount = parseInt(localStorage.getItem('reviewCount')) || 0;
+        reviewCount += 1;
+        localStorage.setItem('reviewCount', reviewCount);
+
+        document.getElementById('reviewCount').textContent = reviewCount;
+    </script>
+</body>
+
+</html>

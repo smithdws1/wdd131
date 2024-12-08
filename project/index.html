@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WDD 131 - Dynamic Web Fundamentals - Homepage - Toyland - David Smith</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <meta name="author" content="David Warren Smith">
+    <meta name="keywords" content="WDD 131, Dynamic Web Fundamentals, CSS, HTML, JavaScript, Smithland, Family, Minecraft">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="styles/toyland.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="styles/toyland.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="scripts/toyland.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-bar">
+            <h1>Minecraft Server Manager</h1>
+            <nav>
+                <a href="javaEdition.html">Java Edition</a>
+                <a href="bedrockEdition.html">Bedrock Edition</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="tiles">
+            <div class="tile server-status" id="server-status">
+                <h2>Server Status</h2>
+                <p>Status: <span id="status-text">Checking...</span></p>
+            </div>
+            <div class="tile" id="server-start">
+                <h2>Start Server</h2>
+                <button onclick="startServer()">Start</button>
+            </div>
+            <div class="tile" id="server-reboot">
+                <h2>Reboot Server</h2>
+                <button onclick="rebootServer()">Reboot</button>
+            </div>
+            <div class="tile">
+                <h2><a href="java.html">Enchantments for Java Edition</a></h2>
+            </div>
+            <div class="tile">
+                <h2><a href="bedrock.html">Enchantments for Bedrock Edition</a></h2>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Minecraft Server Manager</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
