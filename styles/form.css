@@ -39,7 +39,7 @@ main {
 
 .wf1 {
     background-color: #fff;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -82,13 +82,14 @@ main {
 }
 
 .rating input[type="radio"] {
-    margin-bottom: 5px;
+    margin-bottom: .1rem;
 }
 
 .rating .stars {
     font-size: 1.5rem;
     color: var(--star-color);
     transition: color 0.3s ease;
+    margin-bottom: 1rem;
 }
 
 .rating input[type="radio"]:checked + .stars {
@@ -126,11 +127,12 @@ footer {
     header,
     main,
     footer {
-        padding: 10px;
+        padding: .25rem;
     }
 
     .rating {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
+        margin: auto;
     }
 }
