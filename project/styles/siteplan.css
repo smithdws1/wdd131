@@ -3,21 +3,23 @@ body {
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
+    color: #333;
 }
 
 header {
-    background-color: #4CAF50; 
+    background-color: #4CAF50;
     color: white;
     text-align: center;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     padding-left: 1rem;
 }
 
@@ -43,21 +45,24 @@ main {
 
 .tile-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .tile {
     padding: 1.5rem;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
     font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .tile.site-name {
-    background-color: #3C861A; 
+    background-color: #3C861A;
 }
 
 .tile.site-purpose {
@@ -88,14 +93,64 @@ main {
     background-color: #8D8E8E;
 }
 
+.wireframes {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.image-center img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-row img {
+    max-width: 100%;
+    height: auto;
+    width: calc(50% - 10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 1024px) {
     .tile-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 768px) {
     .tile-container {
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+    }
+
+    .image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .image-row img {
+        width: 100%;
     }
 }
