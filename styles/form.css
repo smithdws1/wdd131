@@ -96,6 +96,11 @@ main {
     color: var(--star-highlight);
 }
 
+.wf1 input[type="date"] {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
 .wf1 input[type="submit"] {
     background-color: var(--primary-color);
     color: var(--text-color);
