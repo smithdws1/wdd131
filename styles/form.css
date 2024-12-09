@@ -1,57 +1,95 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f8f9fa;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    color: #333;
 }
 
-h1 {
-    color: #4a2c6f;
+header {
+    background-color: royalblue;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
 }
 
 form {
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
-    margin: auto;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 label {
     display: block;
-    margin-top: 15px;
     font-weight: bold;
+    margin-top: 15px;
+    color: #4a2c6f; 
 }
 
-input, select, textarea {
+input[type="text"],
+input[type="date"],
+select,
+textarea {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
     box-sizing: border-box;
 }
 
-input[type="checkbox"], input[type="radio"] {
-    width: auto;
+input[type="checkbox"],
+input[type="radio"] {
     margin-right: 10px;
 }
 
 fieldset {
     border: none;
-    padding: 0;
     margin-top: 15px;
+    padding: 0;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4a2c6f;
+}
+
+input[type="radio"] + label {
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    color: #ffcc00;
 }
 
 input[type="submit"] {
-    background-color: #4a2c6f;
-    color: #fff;
-    padding: 10px;
+    background-color: royalblue;
+    color: white;
+    padding: 12px;
     border: none;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 100%;
     border-radius: 4px;
     font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
@@ -59,8 +97,26 @@ input[type="submit"]:hover {
 }
 
 footer {
+    background-color: #4a2c6f;
+    color: #fff;
     text-align: center;
-    margin-top: 20px;
-    font-size: 0.9em;
-    color: #777;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 0.9em;
+    }
 }
