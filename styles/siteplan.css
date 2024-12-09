@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'Mojangles';
+    src: url('../mojangles.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: "Quicksand", "Raleway", "Roboto", sans-serif;
+    font-family: 'Mojangles', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #FFFFFF;
