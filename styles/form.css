@@ -1,122 +1,136 @@
+:root {
+    --primary-color: royalblue;
+    --text-color: #ffffff;
+    --background-color: #f2f2f2;
+    --star-color: #ccc;
+    --star-highlight: #ffcc00;
+    --border-color: #ccc;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: var(--background-color);
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
-    background-color: royalblue;
-    color: #fff;
-    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
-    font-size: 1.8em;
+    padding: 20px;
+    font-size: 1.8rem;
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
 }
 
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 10px;
 }
 
-form {
+.wf1 {
     background-color: #fff;
     padding: 20px;
-    max-width: 500px;
-    width: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    max-width: 600px;
+    width: 100%;
 }
 
-label {
+.wf1 label {
     display: block;
     font-weight: bold;
     margin-top: 15px;
-    color: #4a2c6f; 
 }
 
-input[type="text"],
-input[type="date"],
-select,
-textarea {
+.wf1 input[type="text"],
+.wf1 input[type="date"],
+.wf1 select,
+.wf1 textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 1rem;
     box-sizing: border-box;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    margin-right: 10px;
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: nowrap;
 }
 
-fieldset {
-    border: none;
-    margin-top: 15px;
-    padding: 0;
-}
-
-legend {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #4a2c6f;
-}
-
-input[type="radio"] + label {
-    font-size: 1.5em;
-    color: #ccc;
+.rating label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
 }
 
-input[type="radio"]:checked + label {
-    color: #ffcc00;
+.rating input[type="radio"] {
+    margin-bottom: 5px;
 }
 
-input[type="submit"] {
-    background-color: royalblue;
-    color: white;
+.rating .stars {
+    font-size: 1.5rem;
+    color: var(--star-color);
+    transition: color 0.3s ease;
+}
+
+.rating input[type="radio"]:checked + .stars {
+    color: var(--star-highlight);
+}
+
+.wf1 input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 12px;
     border: none;
     border-radius: 4px;
-    font-size: 1em;
+    font-size: 1rem;
     cursor: pointer;
-    width: 100%;
     margin-top: 20px;
+    width: 100%;
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: #5a3c7f;
+.wf1 input[type="submit"]:hover {
+    background-color: #0047ab;
 }
 
 footer {
-    background-color: #4a2c6f;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
 }
 
 @media (max-width: 600px) {
-    header {
-        font-size: 1.5em;
-        padding: 15px;
+    header,
+    main,
+    footer {
+        padding: 10px;
     }
 
-    form {
-        padding: 15px;
-    }
-
-    input[type="submit"] {
-        font-size: 0.9em;
+    .rating {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
