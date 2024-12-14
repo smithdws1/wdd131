@@ -52,13 +52,19 @@ function setupClickableTiles() {
 }
 
 // Lazy load background images and <img> elements
+document.addEventListener('DOMContentLoaded', () => {
+    setupLazyLoading();
+});
+
+// Function to lazy load background images
 function setupLazyLoading() {
     const lazyBackgrounds = document.querySelectorAll('.lazy-background');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const tile = entry.target;
-                const bgImage = tile.getAttribute('data-bg');
+                const bgImage = tile.getAttribute('img-bg');
                 if (bgImage) {
                     tile.style.backgroundImage = `url(${bgImage})`;
                     observer.unobserve(tile);
@@ -67,10 +73,5 @@ function setupLazyLoading() {
         });
     });
 
-    lazyBackgrounds.forEach(tile => observer.observe(tile));
-
-    // Lazy load standard <img> elements
-    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-        img.addEventListener('load', () => img.classList.add('loaded'));
-    });
+    lazyBackgrounds.forEach((tile) => observer.observe(tile));
 }
