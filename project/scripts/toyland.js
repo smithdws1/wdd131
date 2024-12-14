@@ -38,7 +38,7 @@ function setupClickableTiles() {
     document.querySelectorAll('.tile').forEach(tile => {
         const selects = tile.querySelectorAll('select');
 
-        // Add the click event listener once
+        // Add the click event listener
         tile.addEventListener('click', () => {
             if (tile.classList.contains('clickable')) {
                 const tileTitle = tile.querySelector('h2').textContent;
