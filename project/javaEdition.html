@@ -2,68 +2,97 @@
 <html lang="en">
 
 <head>
+    <meta name="description" content="Smithland Minecraft Server Manager for Java and Bedrock editions">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>WDD 131 - Dynamic Web Fundamentals - Java Edition - Toyland - David Smith</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <title>Toyland - Minecraft Server Manager</title>
     <meta name="author" content="David Warren Smith">
-    <meta name="keywords" content="WDD 131, Dynamic Web Fundamentals, CSS, HTML, JavaScript, Smithland, Family, Minecraft">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="keywords"
+        content="WDD 131, Dynamic Web Fundamentals Project, CSS, HTML, JavaScript, Smithland, Family, Minecraft">
     <link rel="preload" href="styles/toyland.css" as="style" onload="this.rel='stylesheet'">
+    <link rel="preload" href="mojangles.ttf" as="font" type="font/ttf" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/toyland.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="scripts/toyland.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div class="logo-bar">
-            <h1>Java Edition Enchantments</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="bedrockEdition.html">Bedrock Edition</a>
-            </nav>
-        </div>
+        <h2>Toyland - Minecraft Server Manager</h2>
+        <nav>
+            <a href="javaEdition.html">Java Edition</a>
+            <a href="bedrockEdition.html">Bedrock Edition</a>
+        </nav>
     </header>
+
     <main>
-        <section class="tiles">
-            <div class="tile">
-                <h2><a href="#weapons">Weapons</a></h2>
-            </div>
-            <div class="tile">
-                <h2><a href="#tools">Tools</a></h2>
-            </div>
-            <div class="tile">
-                <h2><a href="#armor">Armor</a></h2>
-            </div>
-            <div class="tile">
-                <h2><a href="#effects">Effects</a></h2>
-            </div>
-        </section>
+        <section class="tiles-container">
 
-        <section id="enchantments">
-            <h2>Enchantments</h2>
-            <form id="enchantment-form">
-                <label for="character-name">Character Name:</label>
-                <input type="text" id="character-name" placeholder="Enter character name">
+            <a href="#" class="tile server-status-tile" id="server-status-tile">
+                <h2>Server Status</h2>
+                <p>Status: <span id="status-text">Checking...</span></p>
+            </a>
+            <div class="tile" style="background-image: url('images/pic2.png');" loading="lazy">
+                <h2>Effects</h2>
+                <div class="picker">
+                    <label for="effects-list">Select Effect:</label>
+                    <select id="effects-list">
+                        <option value="">Select...</option>
+                        <option value="speed">Speed</option>
+                        <option value="strength">Strength</option>
+                    </select>
+                    <p>Player: Everybody</p>
+                </div>
+                <a class="card-link">Apply Effect</a>
+            </div>
 
-                <label for="level">Enchantment Level:</label>
-                <select id="level">
-                    <option value="1">Level 1</option>
-                    <option value="2">Level 2</option>
-                    <option value="3">Level 3</option>
-                    <option value="4">Level 4</option>
-                    <option value="5">Level 5</option>
-                </select>
-
-                <p>Note: To grant an enchantment, the selected item must be active in your game window.</p>
-                <button type="submit">Apply Enchantment</button>
-            </form>
+            <div class="tile" style="background-image: url('images/pic3.png');" loading="lazy">
+                <h2>Coming Soon!</h2>
+            </div>
+            <div class="tile" style="background-image: url('images/pic4.png');" loading="lazy">
+                <h2>Weapon Enchantments</h2>
+                <div class="picker">
+                    <label for="effects-list">Select Effect:</label>
+                    <select id="effects-list">
+                        <option value="">Select...</option>
+                        <option value="speed">Speed</option>
+                        <option value="strength">Strength</option>
+                    </select>
+                    <p>Player: Everybody</p>
+                </div>
+                <a class="card-link">Apply Enchantment</a>
+            </div>
+            <div class="tile" style="background-image: url('images/pic5.png');" loading="lazy">
+                <h2>Armor Enchantments</h2>
+                <div class="picker">
+                    <label for="effects-list">Select Effect:</label>
+                    <select id="effects-list">
+                        <option value="">Select...</option>
+                        <option value="speed">Speed</option>
+                        <option value="strength">Strength</option>
+                    </select>
+                    <p>Player: Everybody</p>
+                </div>
+                <a class="card-link">Apply Enchantment</a>
+            </div>
+            <div class="tile" style="background-image: url('images/pic6.png');" loading="lazy">
+                <h2>Tool Enchantments</h2>
+                <div class="picker">
+                    <label for="effects-list">Select Effect:</label>
+                    <select id="effects-list">
+                        <option value="">Select...</option>
+                        <option value="speed">Speed</option>
+                        <option value="strength">Strength</option>
+                    </select>
+                    <p>Player: Everybody</p>
+                </div>
+                <a class="card-link">Apply Enchantment</a>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 Minecraft Server Manager</p>
+        <p>&copy; <span id="year"></span> David Smith. All Rights Reserved. Last Updated: <span id="last-modified"></span>
+        </p>
     </footer>
 </body>
 
