@@ -1,7 +1,7 @@
 /* Use my custom font */
 @font-face {
     font-family: 'Mojangles';
-    src: url('../mojangles.ttf') format('truetype');
+    src: url('/mojangles.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -125,6 +125,7 @@ main h2 {
 .tile.clickable:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Title Styling */

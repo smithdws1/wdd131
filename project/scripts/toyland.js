@@ -36,22 +36,17 @@ async function checkServerStatus() {
 // Make tiles clickable when an option is selected in the picker
 function setupClickableTiles() {
     document.querySelectorAll('.tile').forEach(tile => {
-        const selects = tile.querySelectorAll('select');
+        const select = tile.querySelector('select');
 
-        // Add the click event listener
+        select?.addEventListener('change', () => {
+            tile.classList.toggle('clickable', select.value !== '');
+        });
+
         tile.addEventListener('click', () => {
             if (tile.classList.contains('clickable')) {
                 const tileTitle = tile.querySelector('h2').textContent;
                 alert(`Action applied for ${tileTitle}`);
             }
-        });
-
-        // Listen for changes in the first select element
-        selects.forEach(select => {
-            select.addEventListener('change', () => {
-                // Check if the first picker has a valid selection
-                tile.classList.toggle('clickable', selects[0].value !== '');
-            });
         });
     });
 }
