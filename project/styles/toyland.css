@@ -17,7 +17,7 @@ body {
     align-items: center;
 }
 
-/*Footer Styling */
+/* Footer Styling */
 footer {
     background-color: #222;
     color: white;
@@ -49,15 +49,6 @@ header {
     box-sizing: border-box;
 }
 
-/* Centered h2 Styling */
-header h2 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    font-size: 1.5rem;
-}
-
 /* Navigation Styling */
 header nav {
     position: absolute;
@@ -73,20 +64,12 @@ header nav a {
     font-size: 1rem;
 }
 
-
 /* Main Section Styling */
 main {
     text-align: center;
     padding: 2rem;
     width: 100%;
     max-width: 950px;
-}
-
-/* Center the h2 in main */
-main h2 {
-    max-width: 950px;
-    margin: 0 auto 2rem;
-    font-size: 1.5rem;
 }
 
 /* Tiles Container Styling */
@@ -98,12 +81,11 @@ main h2 {
     margin: 0 auto;
 }
 
-/* For consistent tile size across all pages */
+/* Tile Styling */
 .tile {
     height: 256px;
     width: 100%;
     max-width: 256px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -111,71 +93,18 @@ main h2 {
     text-align: center;
     font-size: 1.5rem;
     color: white;
-    text-decoration: none;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-size: 128px 128px;
     background-repeat: repeat;
-    background-position: center;
     position: relative;
     padding-bottom: 1rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-}
-
-/* Mouse-over effect for clickable tiles */
-.tile.clickable:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Title Styling */
-.tile h2 {
-    margin: 0;
-    font-size: 2rem;
-    color: white;
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    z-index: 1;
 }
 
 /* Picker Styling */
-.picker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-top: auto;
-}
-
-/* Smaller Picker Labels */
 .picker label {
     font-size: 0.9rem;
     margin-bottom: 0.3rem;
-}
-
-/* Remove Apply Button */
-.card-link {
-    display: none;
-}
-
-/* Server Status Tile */
-.server-status-tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: white;
-    background-color: red;
-}
-
-/* Cursor styling for clickable tiles */
-.tile.clickable {
-    cursor: pointer;
 }
 
 /* Responsive Design */
