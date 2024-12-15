@@ -36,20 +36,36 @@ async function checkServerStatus() {
 // Make tiles clickable when an option is selected in the picker
 function setupClickableTiles() {
     document.querySelectorAll('.tile').forEach(tile => {
-        const select = tile.querySelector('select');
+        const selects = tile.querySelectorAll('select');
 
-        select?.addEventListener('change', () => {
-            tile.classList.toggle('clickable', select.value !== '');
-        });
+        // Track whether the tile has become clickable
+        let isTileClickable = false;
 
+        // Add a click event listener to the tile
         tile.addEventListener('click', () => {
-            if (tile.classList.contains('clickable')) {
+            if (isTileClickable) {
                 const tileTitle = tile.querySelector('h2').textContent;
                 alert(`Action applied for ${tileTitle}`);
+                isTileClickable = false;
+                tile.classList.remove('clickable');
             }
+        });
+        
+        // Listen for changes in the select elements
+        selects.forEach(select => {
+            select.addEventListener('change', () => {
+                if (Array.from(selects).some(sel => sel.value !== '')) {
+                    isTileClickable = true;
+                    tile.classList.add('clickable');
+                } else {
+                    isTileClickable = false;
+                    tile.classList.remove('clickable');
+                }
+            });
         });
     });
 }
+
 
 // Lazy load background images and <img> elements
 document.addEventListener('DOMContentLoaded', () => {
