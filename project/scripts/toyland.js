@@ -33,11 +33,13 @@ async function checkServerStatus() {
 function setupClickableTiles() {
     document.querySelectorAll('.tile').forEach(tile => {
         const selects = tile.querySelectorAll('select');
+
         let isTileClickable = false;
 
         tile.addEventListener('click', () => {
             if (isTileClickable) {
-                alert(`Action applied for ${tile.querySelector('h2').textContent}`);
+                const tileTitle = tile.querySelector('h2').textContent;
+                alert(`Action applied for ${tileTitle}`);
                 isTileClickable = false;
                 tile.classList.remove('clickable');
             }
@@ -45,12 +47,18 @@ function setupClickableTiles() {
 
         selects.forEach(select => {
             select.addEventListener('change', () => {
-                isTileClickable = Array.from(selects).some(sel => sel.value !== '');
-                tile.classList.toggle('clickable', isTileClickable);
+                if (select.value !== '') {
+                    isTileClickable = true;
+                    tile.classList.add('clickable');
+                } else {
+                    isTileClickable = false;
+                    tile.classList.remove('clickable');
+                }
             });
         });
     });
 }
+
 
 function setupLazyLoading() {
     const lazyBackgrounds = document.querySelectorAll('.lazy-background');
