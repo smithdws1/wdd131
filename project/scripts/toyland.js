@@ -20,7 +20,7 @@ async function checkServerStatus() {
     if (!statusTile) return;
 
     try {
-        const response = await fetch('http://192.168.10.9:3000/api/server-status');
+        const response = await fetch('http://192.168.10.9:51000/api/server-status');
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
         const data = await response.json();
@@ -50,7 +50,7 @@ function setupClickableTiles() {
                 tile.classList.remove('clickable');
             }
         });
-        
+
         // Listen for changes in the select elements
         selects.forEach(select => {
             select.addEventListener('change', () => {

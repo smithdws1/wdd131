@@ -3,7 +3,7 @@ const cors = require('cors');
 const { Rcon } = require('rcon-client');
 
 const app = express();
-const PORT = 3000;
+const PORT = 51000;
 
 // Middleware
 app.use(cors());
