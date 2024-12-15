@@ -80,7 +80,7 @@ function setupLazyLoading() {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 const tile = entry.target;
-                const bgImage = tile.getAttribute('img-bg');
+                const bgImage = tile.getAttribute('data-bg');
                 if (bgImage) {
                     tile.style.backgroundImage = `url(${bgImage})`;
                     observer.unobserve(tile);
